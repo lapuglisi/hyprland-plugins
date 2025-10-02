@@ -1,0 +1,12 @@
+[repository]
+name = "hyprland-tabbed"
+authors = ["lapuglisi"]
+
+[hyprland-tabbed]
+description = "sway like tabbed mode for hyprland"
+authors = ["lapuglisi"]
+output = "build/libhyprland-tabbed.so"
+build = [
+	"cmake -B build",
+	"cmake --build build"
+]
