@@ -34,12 +34,8 @@ static std::iostream& log(void) {
     return logstream;
 }
 
-#ifdef _DEBUG
 #define logStep(__m) \
     log() << "[" << std::filesystem::path(__FILE__).filename() << ":" << __LINE__ << "] " << __m << "\n";
-#else
-#define logStep(__m) (void)(0);
-#endif
 
 static inline PHLWORKSPACE getActiveWorkspace()
 {
